@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillUpHackingIrxploit Academy - Kursus Hacking Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .menu-open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 border-b border-gray-700 fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold gradient-text">SkillUpHackingIrxploit</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#beranda" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900">Beranda</a>
+                        <a href="#harga" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">List Harga</a>
+                        <a href="#kursus" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">List Kursus</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-90 z-20 transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="flex items-center justify-end p-4">
+                <button id="menu-close" class="text-gray-300 hover:text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+                <a href="#beranda" class="block px-3 py-2 rounded-md text-base font-medium text-white w-3/4 text-center bg-gray-900 mb-2">Beranda</a>
+                <a href="#harga" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 w-3/4 text-center mb-2">List Harga</a>
+                <a href="#kursus" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 w-3/4 text-center">List Kursus</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-800 to-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="animate-fadeIn">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Jadi Hacker</span><br>
+                        Profesional Bersama SkillUpHackingIrxploit
+                    </h1>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Pelajari teknik hacking profesional dari dasar hingga mahir dengan bimbingan mentor berpengalaman di industri siber.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#harga" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-md font-medium text-white transition duration-200">Lihat Paket Kursus</a>
+                        <a href="#kursus" class="px-6 py-3 border border-gray-600 hover:bg-gray-800 rounded-md font-medium text-white transition duration-200">Detail Materi</a>
+                    </div>
+                </div>
+                <div class="mt-10 lg:mt-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c16127f5-0884-4124-8cd3-dd455dd5cd8b.png" alt="Hacker profesional bekerja di ruang gelap dengan banyak monitor yang menampilkan kode programming dan tampilan jaringan komputer" class="rounded-lg shadow-xl border border-gray-700 animate-fadeIn" style="animation-delay: 0.2s;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section id="harga" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Paket Kursus Kami</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Pilih paket yang sesuai dengan kebutuhan belajar Anda.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic Package -->
+                <div class="bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-blue-500 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2">Defacement</h3>
+                        <p class="text-gray-400">Untuk pemula yang ingin memulai belajar dasar-dasar hacking</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">Rp 50K</span>
+                        <span class="text-gray-400">/sekali bayar</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Dasar-dasar Defacement
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Pengenalan Dan Pengetahuan Kerja Hacker Meretas Website
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Pratek Dan Di bimbing Oleh Monitor
+                        </li>
+                        
+                        </li>
+                        <li class="flex items-center text-gray-500">
+                            <svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                </svg>
+                                <li>
+                    <button class="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-md font-medium text-white transition duration-300 buy-btn" onclick="openWhatsApp('Defacement Website', '50K')">Daftar Sekarang</button>
+                </div>
+                
+                <!-- Popular Package -->
+                <div class="bg-gray-800 rounded-xl p-8 border-2 border-blue-500 transform hover:-translate-y-2 transition-all duration-300 relative">
+                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                        POPULER
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2">Sql injection</h3>
+                        <p class="text-gray-400">Untuk yang serius menjadi cybersecurity dan Penetration Testing Profesional</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">Rp 70k</span>
+                        <span class="text-gray-400">/sekali bayar</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Materi Sql injection
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Web Application Security
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Pratek Dan Di bimbing Oleh Monitor
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Cocok Untuk Menjadi Bug Hunter & pentesting
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                </svg>
+                                </li>
+                    <button class="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-md font-medium text-white transition duration-200 buy-btn" onclick="openWhatsApp('Sql injection', '70K')">Daftar Sekarang</button>
+                </div>
+                
+                <!-- Elite Package -->
+                <div class="bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-purple-500 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2">Tanem Shell Backdorr</h3>
+                        <p class="text-gray-400">Kursus paling penting mengetahui cara kerja hacker sebelum meretas website</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">Rp 30k</span>
+                        <span class="text-gray-400">/sekali bayar</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            materi pengertian tanem shell backdorr
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Gratis file shell backdorr untuk praktek langsung
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Di bimbing langsung Oleh Monitor
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Gratis Akses Website Cpanel/Wordpres Buat Praktek Langsung    </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                </svg>
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 bg-purple-600 hover:bg-purple-700 rounded-md font-medium text-white transition duration-200 buy-btn" onclick="openWhatsApp('Tanem Shell Backdorr', '30K')">Daftar Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course List Section -->
+    <section id="kursus" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Daftar Materi Kursus</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Belajar dari dasar hingga mahir dengan kurikulum terstruktur</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Course 1 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-200">
+                    <div class="h-48 bg-gray-800 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b5a83d4c-e698-4f87-bc92-886bb89e2838.png" alt="Ilustrasi terminal Linux dengan latar gelap dan teks berwarna hijau neon" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="text-xs font-semibold px-2 py-1 bg-blue-900 text-blue-300 rounded-full">Basic</span>
+                            <span class="text-xs text-gray-500 ml-auto">4 minggu</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Pengenalan Ethical Hacking</h3>
+                        <p class="text-gray-400 text-sm mb-4">Pelajari dasar-dasar ethical hacking, terminologi, dan lingkungan kerja yang digunakan hacker profesional.</p>
+                        <div class="flex flex-wrap gap-2">
+                                                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">trik</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Konsep Dasar</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-200">
+                    <div class="h-48 bg-gray-800 overflow-hidden">
+                        <img src="https://g.top4top.io/p_34674i3vv0.png">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="text-xs font-semibold px-2 py-1 bg-blue-900 text-blue-300 rounded-full">Basic</span>
+                            <span class="text-xs text-gray-500 ml-auto">5 minggu</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Defacement Website</h3>
+                        <p class="text-gray-400 text-sm mb-4">Memahami Dan Mengetahui bagaimana hacker meretas website</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">github</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">script html</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">akses wordpres/cpanel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-200">
+                    <div class="h-48 bg-gray-800 overflow-hidden">
+                        <img src="https://h.top4top.io/p_3466np3520.jpg">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="text-xs font-semibold px-2 py-1 bg-green-900 text-green-300 rounded-full">Intermediate</span>
+                            <span class="text-xs text-gray-500 ml-auto">6 minggu</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Tanem Shell Backdorr</h3>
+                        <p class="text-gray-400 text-sm mb-4">Belajar teknik sebelum hacker meretas website.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">file shell backdorr</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Teknik upshell</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">akses wordpres/cpanel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 4 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-200">
+                    <div class="h-48 bg-gray-800 overflow-hidden">
+                        <img src="https://e.top4top.io/p_3466pcuvc0.jpg">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="text-xs font-semibold px-2 py-1 bg-green-900 text-green-300 rounded-full">Intermediate</span>
+                            <span class="text-xs text-gray-500 ml-auto">8 minggu</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Sql injection</h3>
+                        <p class="text-gray-400 text-sm mb-4">Pelajari kerentanan web populer terhadap celah/bug sql injection dan bagaimana mengeksploitasi cocok untuk menjadi bug hunter dan pentesting website</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">apk dh hackbar</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">teknik mengambil database</span>
+                                                  </div>
+                    </div>
+                </div>
+                
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold gradient-text inline-block mb-4">SkillUpHackingIrxploit Academy</h3>
+                <p class="text-gray-400 text-sm">Platform pembelajaran cybersecurity terdepan di Indonesia, membentuk ethical hacker profesional sejak 2020.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#beranda" class="text-gray-400 hover:text-white text-sm">Beranda</a></li>
+                    <li><a href="#harga" class="text-gray-400 hover:text-white text-sm">List Harga</a></li>
+                    <li><a href="#kursus" class="text-gray-400 hover:text-white text-sm">List Kursus</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Kontak Kami</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li>Email: SkillUpHackingIrxploit@gmail.com</li>
+                    <li>Telepon: (62) 895403849584</li>
+                    <li>Jam Kerja: Senin-Jumat, 09.00-17.00 WIB</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+            <p>© 2025 - 2026 SkillUpHackingIrxploit Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openWhatsApp(productName, productPrice) {
+            const phoneNumber = '62895403849584';
+            const message = `Halo Admin SkillUpHackingIrxploit, saya ingin membeli kelas hacking yang saya minati:\n\nNama Kelas: ${productName}\nHarga: ${productPrice}\n\nSaya Berminat Mas`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        // Hamburger Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links li');
+
+        hamburger.addEventListener('click', () => {
+            // Animate Hamburger
+            hamburger.classList.toggle('toggle');
+            
+            // Toggle Nav
+            navLinks.classList.toggle('active');
+            
+            // Animate Links
+            links.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
